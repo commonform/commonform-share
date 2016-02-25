@@ -24,7 +24,7 @@ function share(form, callback) {
       path: '/forms' },
     function(response) {
       var status = response.statusCode
-      if (status === 201 || status === 201) {
+      if (status === 201 || status === 200) {
         callback(null, response.headers.location) }
       else {
         var buffers = [ ]
