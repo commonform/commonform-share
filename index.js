@@ -23,7 +23,8 @@ function share(form, callback) {
       host: 'api.commonform.org',
       path: '/forms' },
     function(response) {
-      if (response.statusCode === 201) {
+      var status = response.statusCode
+      if (status === 201 || status === 201) {
         callback(null, response.headers.location) }
       else {
         var buffers = [ ]
@@ -33,6 +34,6 @@ function share(form, callback) {
           .on('end', function() {
             var message = Buffer.concat(buffers).toString()
             var error = new Error(message)
-            error.statusCode = response.statusCode
+            error.statusCode = status
             callback(error) }) } })
   .end(JSON.stringify(form)) }
