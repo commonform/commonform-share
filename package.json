@@ -1,0 +1,8 @@
+{
+  "name": "commonform-share",
+  "version": "0.0.0",
+  "description": "share projects to api.commonform.org",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "repository": "commonform/commonform-share",
+  "license": "Apache-2.0"
+}
